@@ -6,9 +6,14 @@
             <a routerLink ="/">Singtionary</a></h1>
         </div>
       
-        <div class="col-md-6">
+        <div class="col-md-6" *ngIf="!isLogged">
             <a routerLink="/login">Login</a>
             <a routerLink="/signup">Registro</a>
+        </div>
+
+
+        <div [hidden]="!isLogged">
+            <a (click)="logout()">Cerrar Sesión</a>
         </div>
     </div>
   </div>
