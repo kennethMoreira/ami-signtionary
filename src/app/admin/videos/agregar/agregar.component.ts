@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Videos } from '../../shared/videos';
 import { VideosService } from '../../services/videos.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-agregar',
@@ -16,7 +17,7 @@ export class AgregarComponent implements OnInit {
   urlBuscada:string;
 videoN:any;
 
-  constructor(private servicioVideo:VideosService) { }
+  constructor(private servicioVideo:VideosService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -49,8 +50,8 @@ videoN:any;
           }else{
             this.servicioVideo.addVideo(video).subscribe(
               (data)=>{
+                window.location.href = window.location.origin + "/admin/videos";
                 console.log(data);
-                window.location.replace("/videos");
               }
             )
           }  

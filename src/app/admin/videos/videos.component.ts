@@ -113,11 +113,13 @@ export class VideosComponent implements OnInit {
     video.observations=" ";
     video.sign_set_id= 1;
     video.person_id = 1;
+    
 
     this.servicioVideo.addVideo(video).subscribe(
       (data)=>{
         console.log(data);
         this.listarVideos();
+
       }
     )
   }
