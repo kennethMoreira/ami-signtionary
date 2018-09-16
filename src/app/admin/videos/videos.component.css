@@ -1,0 +1,20 @@
+.autor{
+color: #696969;
+}
+.modal-dialog {
+    max-width: none;
+    padding: 20px;
+}
+.titulo{
+    text-align: center;
+    padding: 20px;
+}
+
+.navbar{
+    background-color:#bbe4f0!important;
+}
+
+.boton-navbar{
+    background: none !important;
+    border: none;
+}

@@ -1,0 +1,14 @@
+.centro{
+    padding: 30px;
+    text-align: center;
+}
+.label{
+    font-size: 20px;
+    text-align: center;
+    padding: 0px 30px 0px 30px;
+}
+.boton{
+    font-size: 25px;
+    text-align: center;
+    margin: auto; display: block;
+}

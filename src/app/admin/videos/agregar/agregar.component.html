@@ -1,0 +1,13 @@
+
+<div class="container">
+  <div class="row">
+      <input  class="form-control" placeholder="Título del vídeo" [(ngModel)]="nombreVideo">
+      <input  class="form-control" placeholder="URL del vídeo" [(ngModel)]="urlVideo">
+  
+      
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+      <button (click)="agregarVideo()" type="button" class="btn btn-primary" data-dismiss="modal">Agregar Vídeo</button>
+
+  </div>
+</div>
+    
