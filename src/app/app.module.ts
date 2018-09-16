@@ -19,6 +19,8 @@ import { VideosComponent } from './admin/videos/videos.component';
 import { AssetComponent } from './admin/asset/asset.component';
 import { AgregarComponent } from './admin/videos/agregar/agregar.component';
 import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { AdminComponent } from './admin/admin.component';
     VideosComponent,
     AssetComponent,
     AgregarComponent,
-    AdminComponent
+    AdminComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
