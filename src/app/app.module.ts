@@ -21,6 +21,7 @@ import { AgregarComponent } from './admin/videos/agregar/agregar.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { ColaboradoresComponent } from './colaboradores/colaboradores.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SignupComponent } from './signup/signup.component';
     AgregarComponent,
     AdminComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ColaboradoresComponent
   ],
   imports: [
     BrowserModule,

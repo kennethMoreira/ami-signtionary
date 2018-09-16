@@ -6,7 +6,7 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser
 
 import {Pipe, PipeTransform, NgModule} from '@angular/core'
 import {BrowserModule} from '@angular/platform-browser'
-import { BackendService } from './backend.service';
+import { BackendService } from './services/backend.service';
 import { Router } from '@angular/router';
 
 @Pipe({name: 'safe'})
@@ -34,18 +34,19 @@ export class SafePipe implements PipeTransform {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnInit {
 
-
+  public static isLogged = false;
   constructor(private router:Router) {}
-  isLogged = false;
+  
   ngOnInit() {
-    this.isLogged = BackendService.isLogged();
+    AppComponent.isLogged = BackendService.isLogged();
   }
 
   logout() {
     BackendService.idUser = "";
-    this.isLogged = false;
+    AppComponent.isLogged = false;
 
     this.router.navigate(["/home"]);
   }

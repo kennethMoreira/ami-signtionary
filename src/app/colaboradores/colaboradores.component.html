@@ -1,0 +1,139 @@
+<h2>Lista de Request: </h2>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarRequest">
+  Agregar Request
+</button>
+
+<button (click)="statusMe(0)" type="button" class="btn btn-primary" >
+    Solicitudes Pentientes 
+  </button>
+  <button (click)="statusMe(1)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAceptadasRequest">
+    Solicitudes Aceptadas 
+  </button> 
+ <!-- <div>
+      <input placeholder="Request a buscar" [(ngModel)]="buscarRequest">
+    <button (click)="busqueda()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalBuscarRequest"> Buscar</button>
+  </div>
+  
+
+ Modal Tabla-->
+<div  id="modalPendienteRequest" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Sign Text</th>
+                <th>URL</th>
+                <th>Status</th>
+                <th>Observations</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let colaborador of request">
+                <td>{{colaborador.id}}</td>
+                <td>{{colaborador.sign_text}}</td>
+                <td>{{colaborador.url}}</td>
+                <td>{{colaborador.status}}</td>                      
+                <td>{{colaborador.observations}}</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                
+              <ul class="pagination ">
+                <li class="page-item">
+                    <a button (click)="AnteriorPagina()"class="page-link"  > Página Anterior </a>
+                </li>
+                <li class="page-item disabled">
+                    <a button class="page-link"  > {{paginaAnterior}} </a>
+                </li>
+                <li class="page-item active">
+                    <a button class="page-link"  > {{paginaActual}} </a>
+                </li>
+                <li class="page-item disabled">
+                    <a class="page-link"  > {{paginaSiguiente}} </a>
+                </li>
+                <li>
+                    <a button (click)="SiguientePagina()"class="page-link "  > Página siguiente </a>
+                </li>
+              </ul>
+              
+              </tr>
+            </tfoot>
+          </table>  
+        </div>
+        
+      
+
+   <!-- Modal Búsqueda 
+   <div class="modal fade" id="modalBuscarRequest" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Resultado de la búsqueda </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+              <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Sign Text</th>
+                      <th>URL</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let colaborador of request">
+                      <td>{{colaborador.sign_text}}</td>
+                      <td>{{colaborador.url}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+<!-- Modal Agregar -->
+<div class="modal fade" id="modalAgregarRequest" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar Request </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <input placeholder="Sign Text" [(ngModel)]="sign_text">
+        <input placeholder="Url" [(ngModel)]="url">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button (click) ="agregar()" type="button" class="btn btn-primary" data-dismiss="modal">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div #myModel class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header">
+        <h5 class="modal-title ">Title</h5>
+        <button type="button" class="close" (click)="closeModel()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -6,7 +6,8 @@ import { VideosComponent } from './admin/videos/videos.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './shared/auth.guard';
+import { ColaboradoresComponent } from './colaboradores/colaboradores.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:"admin", component: AdminComponent, canActivate: [AuthGuard]},
   {path:"admin/videos", component: VideosComponent, canActivate: [AuthGuard]},
   {path:"login", component: LoginComponent},
-  {path:"signup", component: SignupComponent}
+  {path:"signup", component: SignupComponent},
+  {path:"colaborador", component: ColaboradoresComponent, canActivate: [AuthGuard]}
   
 ];
 

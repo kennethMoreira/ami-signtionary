@@ -11,10 +11,18 @@
             <a routerLink="/signup">Registro</a>
         </div>
 
+        <div class="col-md-6" *ngIf="isLogged">
+                <h1>Cerrar sesion</h1>
+            </div>
+
 
         <div [hidden]="!isLogged">
             <a (click)="logout()">Cerrar Sesión</a>
         </div>
+
+        <div [hidden]="!isLogged">
+                <h1>!Logged</h1>
+            </div>
     </div>
   </div>
   

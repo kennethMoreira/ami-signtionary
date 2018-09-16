@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../auth.service';
-import { Auth } from '../auth';
+import { AuthService } from '../services/auth.service';
+import { Auth } from '../shared/auth';
 import { Router } from '@angular/router';
-import { BackendService } from '../backend.service';
+import { BackendService } from '../services/backend.service';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-login',
@@ -33,7 +34,7 @@ export class LoginComponent implements OnInit {
         this.userBusqueda.forEach(user => {
           if(user.username == this.username){
             BackendService.idUser = user.id;
-
+            AppComponent.isLogged = BackendService.isLogged();
             if(user.role_id == 1) {
               this.router.navigate(["/admin"]);
             }else {
