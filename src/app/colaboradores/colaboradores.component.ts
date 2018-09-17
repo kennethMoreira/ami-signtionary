@@ -16,7 +16,7 @@ export class ColaboradoresComponent implements OnInit {
   id:number;
   sign_text:string;
   url:string;
-  status:number;
+  status:string;
   observations:string;
   sign_set_id:number;
   person_id:number;
@@ -107,7 +107,7 @@ export class ColaboradoresComponent implements OnInit {
           let solicitud = new Request();
           solicitud.sign_text = this.sign_text;
           solicitud.url = urlCargada;
-          solicitud.status = 0;
+          solicitud.status = "0";
           solicitud.observations = "";
           solicitud.sign_set_id = 1;
           solicitud.person_id = 2;
@@ -121,7 +121,7 @@ export class ColaboradoresComponent implements OnInit {
       
           this.sign_text="";
           this.url="";
-          this.status=0;
+          this.status="0";
           this.observations="";
           this.sign_set_id=0;
           this.person_id=0;
@@ -131,7 +131,7 @@ export class ColaboradoresComponent implements OnInit {
         {
           // this.sign_text="";
           this.url = "[Enlace no válido]";
-          this.status=0;
+          this.status="0";
           this.observations="";
           this.sign_set_id=0;
           this.person_id=0;

@@ -16,12 +16,21 @@ import { HomeComponent } from './home/home.component';
 
 //ADMIN
 import { VideosComponent } from './admin/videos/videos.component';
-import { AssetComponent } from './admin/asset/asset.component';
+import { AssetComponent } from './asset/asset.component';
 import { AgregarComponent } from './admin/videos/agregar/agregar.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ColaboradoresComponent } from './colaboradores/colaboradores.component';
+import { CountryComponent } from './country/country.component';
+import {PeopleComponent} from './people/people.component';
+import {PermissionComponent} from './permission/permission.component';
+import {PersonComponent} from './person/person.component';
+import {SignsetComponent} from './signset/signset.component';
+import {RequestComponent} from './request/request.component';
+import {RoleComponent} from './role/role.component';
+import { MenuAdminComponent } from './menu-admin/menu-admin.component';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +43,15 @@ import { ColaboradoresComponent } from './colaboradores/colaboradores.component'
     AdminComponent,
     LoginComponent,
     SignupComponent,
-    ColaboradoresComponent
+    ColaboradoresComponent,
+    CountryComponent, 
+    PeopleComponent,
+    PermissionComponent,
+    PersonComponent,
+    SignsetComponent,
+    RequestComponent,
+    RoleComponent,
+    MenuAdminComponent
   ],
   imports: [
     BrowserModule,

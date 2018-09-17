@@ -37,11 +37,12 @@ export class SafePipe implements PipeTransform {
 
 export class AppComponent implements OnInit {
 
-  public static isLogged = false;
+  public static isLogged:boolean = !!localStorage.getItem("idUser");
   constructor(private router:Router) {}
   
   ngOnInit() {
-    AppComponent.isLogged = BackendService.isLogged();
+    AppComponent.isLogged = !!localStorage.getItem("idUser");
+    console.log(AppComponent.isLogged)
   }
 
   logout() {

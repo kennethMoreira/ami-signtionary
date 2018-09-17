@@ -1,11 +1,10 @@
-
-
-
+<app-menu-admin></app-menu-admin>
+  
   <div>
-        <div class="col-lg-12 text-center" id="icono"><i class="fas fa-american-sign-language-interpreting fa-8x"></i></div>
+      <div class="col-lg-12 text-center" id="icono"><i class="fas fa-american-sign-language-interpreting fa-8x"></i></div>
       <div class="autor" *ngFor="let people of people">
           
-          <h1 class="centro" *ngIf="people.id=='1'">Bienvenido {{people.name}} {{people.last_name}}</h1>
+          <h1 class="centro" *ngIf="people.id=='1'">Bienvenido {{people.first_name}} {{people.last_name}}</h1>
       </div>
       
     <p class="label">En esta sección podrás subir todo el contenido que se encuentra en nuestra página de Youtube, adicional a esto 

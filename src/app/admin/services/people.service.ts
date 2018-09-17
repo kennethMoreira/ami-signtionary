@@ -10,7 +10,12 @@ export class PeopleService {
 
   constructor(private http:HttpClient) {
 
-}                                                                                                                                   
+}
+
+
+getPeopleById(id){
+  return this.http.get("http://modoayuda.com/api/person/"+id);
+}
 
 getPeople2(){
   return this.http.get<People[]>(this.API_URL);

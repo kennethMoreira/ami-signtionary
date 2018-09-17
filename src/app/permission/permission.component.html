@@ -1,28 +1,40 @@
 <app-menu-admin></app-menu-admin><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAgregar">
-    Add asset
+    Add permission
   </button>
   
-  <div>
+<!--   <div>
     <input placeholder="Search asset" [(ngModel)]="buscar">
   <button (click)="busqueda()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalBuscar"> Search</button>
-  </div>
+  </div> -->
   <!-- Listar  -->
   <table class="table-sm table-striped">
     <thead>
       <tr>
-        
+          
+       
+          
         
         <th scope="col">id</th>
-        <th scope="col">name</th>
-        
-        <th scope="col">Editar</th>
-        <th scope="col">Eliminar</th>
+        <th scope="col">rol</th>        
+        <th scope="col">Asset</th>
+        <th scope="col">puede leer</th>
+        <th scope="col">puede insertar</th>
+        <th scope="col">puede editar</th>
+        <th scope="col">puede eliminar</th>
+        <th scope="col">Editar permission</th>
+        <th scope="col">Eliminar permission</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let element of objectArray">
         <td>{{ element.id }}</td>
-        <td>{{ element.name }}</td>
+        <td>{{ element.role_id }}</td>
+        <td>{{ element.asset_id }}</td>
+        <td>{{ element.can_read }}</td>
+        <td>{{ element.can_insert }}</td>
+        <td>{{ element.can_update }}</td>
+        <td>{{ element.can_delete }}</td>
+
         
         <td><button (click) ="editar(element)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditar">
             Editar
@@ -71,7 +83,46 @@
         </div>
         <div class="modal-body">
           
-          <input placeholder="Editname" [(ngModel)]="Editname">
+          
+
+
+          <table class="table-responsive table-sm table-striped">
+              <thead>
+                <tr>
+                    
+                 
+                    
+                  
+                  
+                  <th scope="col">rol</th>        
+                  <th scope="col">Asset</th>
+                  <th scope="col">puede leer</th>
+                  <th scope="col">puede insertar</th>
+                  <th scope="col">puede editar</th>
+                  <th scope="col">puede eliminar</th>
+               
+                </tr>
+              </thead>
+              <tbody>
+                <tr >
+                  <td><input placeholder="Editedrole_id" [(ngModel)]="Editedrole_id"></td>
+                  <td><input placeholder="Editedasset_id" [(ngModel)]="Editedasset_id"></td>
+                  <td><input placeholder="Editedcan_read" [(ngModel)]="Editedcan_read"></td>
+                  <td><input placeholder="Editedcan_insert" [(ngModel)]="Editedcan_insert"></td>
+                  <td><input placeholder="Editedcan_update" [(ngModel)]="Editedcan_update"></td>
+                  <td><input placeholder="Editedcan_delete" [(ngModel)]="Editedcan_delete"></td>
+                  
+                  
+                  
+                 
+                </tr>
+              
+            
+                
+              </tbody>
+              
+            </table>
+            
          
   
   
@@ -96,7 +147,15 @@
         </div>
         <div class="modal-body">
         
-        <input placeholder="Ingresa url"    [(ngModel)]="name">
+        
+        <input placeholder="Ingresa el rol "    [(ngModel)]="role_id">
+        <input placeholder="Ingresa el id del asset "    [(ngModel)]="asset_id">
+        <input placeholder="Puede leer? "    [(ngModel)]="can_read">
+        <input placeholder="Puede insertar? "    [(ngModel)]="can_insert">
+        <input placeholder="Puede actualizar? "    [(ngModel)]="can_update">
+        <input placeholder="Puede eliminar? "    [(ngModel)]="can_delete">
+
+        
         
         </div>
         <div class="modal-footer">
@@ -108,7 +167,7 @@
   </div>
   
    <!-- Modal Búsqueda -->
-   <div class="modal fade" id="modalBuscar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!--  <div class="modal fade" id="modalBuscar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog " role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -142,9 +201,11 @@
                 <td><button (click)="eliminar(element)" class="btn btn-danger">Eliminar</button></td>
                 
               </tr>
+              
           
               
             </tbody>
+
             <tfoot>
                 <tr>
                   
@@ -170,6 +231,7 @@
               </tfoot>
           
           </table>
+          
         </div>
         </div>
         <div class="modal-footer">
@@ -178,5 +240,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   

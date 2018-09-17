@@ -9,13 +9,13 @@ import { People } from '../admin/shared/people';
 })
 export class AdminComponent implements OnInit {
 
-  people: People[];
+  people: any;
 
   constructor(private servicioPeople:PeopleService) { }
 
   ngOnInit() {
-    
-    this.servicioPeople.getPeople2().subscribe( (data)=>{ //SUSCRIBIRSE PARA LLEGAR INFOMACION
+    let id = localStorage.getItem("idUser");
+    this.servicioPeople.getPeopleById(id).subscribe( (data)=>{ //SUSCRIBIRSE PARA LLEGAR INFOMACION
       console.log(data);
       this.people = data;
     }) 

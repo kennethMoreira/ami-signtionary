@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
-
+import { HttpClient } from "@angular/common/http";
+import {People} from '../shared/people';
 @Injectable({
   providedIn: 'root'
 })
 export class PeopleService {
 
-  constructor() { }
+  readonly API_URL = "http://modoayuda.com/api/people";
+
+  constructor(private http:HttpClient) {
+   }
 }

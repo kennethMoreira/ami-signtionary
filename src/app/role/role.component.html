@@ -1,5 +1,6 @@
-<app-menu-admin></app-menu-admin><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAgregar">
-    Add asset
+<app-menu-admin></app-menu-admin>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAgregar">
+    Add Role
   </button>
   
   <div>
@@ -14,7 +15,7 @@
         
         <th scope="col">id</th>
         <th scope="col">name</th>
-        
+        <th scope="col">description</th>
         <th scope="col">Editar</th>
         <th scope="col">Eliminar</th>
       </tr>
@@ -23,7 +24,7 @@
       <tr *ngFor="let element of objectArray">
         <td>{{ element.id }}</td>
         <td>{{ element.name }}</td>
-        
+        <td>{{ element.description }}</td>
         <td><button (click) ="editar(element)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditar">
             Editar
           </button></td>
@@ -72,7 +73,8 @@
         <div class="modal-body">
           
           <input placeholder="Editname" [(ngModel)]="Editname">
-         
+
+          <input placeholder="Editdescription" [(ngModel)]="Editdescription">
   
   
         </div>
@@ -89,19 +91,19 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Agregar asset </h5>
+          <h5 class="modal-title" id="exampleModalLabel">Agregar Rol </h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
         
-        <input placeholder="Ingresa url"    [(ngModel)]="name">
-        
+        <input placeholder="Ingresa nombre"    [(ngModel)]="name">
+        <input placeholder="Ingresa description"    [(ngModel)]="description">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <button (click) ="agregar()" type="button" class="btn btn-primary" data-dismiss="modal">Add asset</button>
+          <button (click) ="agregar()" type="button" class="btn btn-primary" data-dismiss="modal">Add role</button>
         </div>
       </div>
     </div>
@@ -126,7 +128,7 @@
                 
                 <th scope="col">id</th>
                 <th scope="col">name</th>
-                
+                <th scope="col">description</th>
                 <th scope="col">Editar</th>
                 <th scope="col">Eliminar</th>
               </tr>
@@ -135,7 +137,7 @@
               <tr *ngFor="let element of objectArray">
                 <td>{{ element.id }}</td>
                 <td>{{ element.name }}</td>
-                
+                <td>{{ element.description }}</td>
                 <td><button (click) ="editar(element)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditar" data-dismiss="modal">
                     Editar
                   </button></td>

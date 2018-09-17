@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 const idUser = "";
 
 export class BackendService {
-
   
 
   static isLogged():boolean {
