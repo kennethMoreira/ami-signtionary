@@ -1,22 +1,20 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="gris">
-    <div class="row">
-        <div class="col-md-6">
-  <img src="assets/images/logo.png" class="logo">
-          <h1>
-            <a class="logo" routerLink ="/">Singtionary</a></h1>
-           
-        </div>
-         
-        <div class="col-md-12 supermenu">
-              <a class="menu" (click)="logout()">Salir</a>
-            <a class="menu" routerLink="/signup">Registro</a>
-            <a class="menu" routerLink="/login">Login</a>
-        </div>
-      
-        
+
+
+
+<nav class="navbar navbar-dark bg-dark static-top">
+        <div class="container">
+        <img src="assets/images/logo.png" routerLink ="/" class="logo navbar-brand">
+        <form class="form-inline my-2 my-lg-0">
+            <a class="btn btn-outline-success mr-sm-2" routerLink="/login">Login</a>
+            <a class="btn btn-outline-success my-2 my-sm-0" routerLink="/signup">Registro</a>
+            <a class="btn my-2 my-sm-0 plano" style="color: white" (click)="logout()">Salir</a>
+        </form>
     </div>
-  </div>
+</nav>
+
+
+
   
   
   <router-outlet></router-outlet>

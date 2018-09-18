@@ -1,14 +1,15 @@
 <h2>Lista de Request: </h2>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarRequest">
-  Agregar Request
-</button>
+
 
 <button (click)="statusMe(0)" type="button" class="btn btn-primary" >
-    Solicitudes Pentientes 
+    Solicitudes Pendientes 
   </button>
   <button (click)="statusMe(1)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAceptadasRequest">
     Solicitudes Aceptadas 
   </button> 
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarRequest">
+      Agregar Solicitud
+  </button>
  <!-- <div>
       <input placeholder="Request a buscar" [(ngModel)]="buscarRequest">
     <button (click)="busqueda()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalBuscarRequest"> Buscar</button>

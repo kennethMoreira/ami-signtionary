@@ -68,12 +68,12 @@ export class HomeComponent implements OnInit {
   }
 
   firequery(start, end) {
-    return this.afs.collection('palabras', ref => ref.limit(10).orderBy('descripcion').startAt(start).endAt(end)).valueChanges();
+    return this.afs.collection('palabras', ref => ref.limit(1).orderBy('descripcion').startAt(start).endAt(end)).valueChanges();
   }
 
   getallclubs() {
     
-    return this.afs.collection('palabras', ref => ref.limit(5).orderBy('descripcion')).valueChanges();
+    return this.afs.collection('palabras', ref => ref.limit(1).orderBy('descripcion')).valueChanges();
   }
 
 

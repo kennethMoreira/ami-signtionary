@@ -1,11 +1,11 @@
 <app-menu-admin></app-menu-admin>
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAgregar">
-    Add Role
+    Añadir Rol
   </button>
   
   <div>
     <input placeholder="Search asset" [(ngModel)]="buscar">
-  <button (click)="busqueda()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalBuscar"> Search</button>
+  <button (click)="busqueda()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalBuscar"> Buscar</button>
   </div>
   <!-- Listar  -->
   <table class="table-sm table-striped">
@@ -13,9 +13,9 @@
       <tr>
         
         
-        <th scope="col">id</th>
-        <th scope="col">name</th>
-        <th scope="col">description</th>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripción</th>
         <th scope="col">Editar</th>
         <th scope="col">Eliminar</th>
       </tr>
@@ -102,8 +102,8 @@
         <input placeholder="Ingresa description"    [(ngModel)]="description">
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <button (click) ="agregar()" type="button" class="btn btn-primary" data-dismiss="modal">Add role</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button (click) ="agregar()" type="button" class="btn btn-primary" data-dismiss="modal">Añadir Rol</button>
         </div>
       </div>
     </div>
@@ -126,11 +126,11 @@
               <tr>
                 
                 
-                <th scope="col">id</th>
-                <th scope="col">name</th>
-                <th scope="col">description</th>
-                <th scope="col">Editar</th>
-                <th scope="col">Eliminar</th>
+                  <th scope="col">Id</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Descripción</th>
+                  <th scope="col">Editar</th>
+                  <th scope="col">Eliminar</th>
               </tr>
             </thead>
             <tbody>

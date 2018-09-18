@@ -5,6 +5,10 @@
        
 }
 
+.plano {
+    color: white;
+}
+
 .menu{
 margin-right: 20px;       
 float: right;
@@ -19,7 +23,7 @@ padding-bottom: 20px;
 }
 
 .logo{
-width: 130px;
+width: 250px;
 }
 
 a.logo {
