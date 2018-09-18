@@ -4,3 +4,27 @@
     padding-left: 50px;
        
 }
+
+.menu{
+margin-right: 20px;       
+float: right;
+
+}
+
+.supermenu{
+color: white;
+float: right;
+padding-bottom: 20px;
+
+}
+
+.logo{
+width: 130px;
+}
+
+a.logo {
+    position: absolute;
+    margin-top: -60px;
+    margin-left: 140px;
+    color: white;
+}

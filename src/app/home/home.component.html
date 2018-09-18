@@ -1,11 +1,16 @@
 
+  <div class="row">
+        <div class="col-md-12 words">
+		<input class="buscar" type="text" [(ngModel)]="searchterm" (keydown)="search($event)" placeholder="Busque una palabra o frase">
+		</div>
 
-<input type="text" [(ngModel)]="searchterm" (keydown)="search($event)">
-<ul *ngFor="let club of allclubs">
-  <li>{{club.descripcion }}</li>
+	<div class="col-md-12 videos">
+		<ul *ngFor="let club of allclubs">
+  		<iframe id="ytplayer" type="text/html" width="640" height="360"  [src]="club.url | safe" frameborder="0" allowfullscreen></iframe>
+		</ul>
 
-  <iframe id="ytplayer" type="text/html" width="640" height="360"  [src]="club.url | safe" frameborder="0" allowfullscreen></iframe>
-</ul>
-<div *ngIf="allclubs?.length < 1">
-  <p>No se encontraron resultados</p>
+	<div *ngIf="allclubs?.length < 1">
+  		<p>No se encontraron resultados</p>
+	</div>
+	</div>
 </div>
